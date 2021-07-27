@@ -14,6 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
+
   # config.secret_key = 'eb1cfeda8666b0d686481252a8d4b4bd7d32689dae32fdde2ed095b85ee412472b8aa51f4d524cf99e24f92cf46bc0f355c3d84ab67116ce62c78bc583ec78e4'
 
   # ==> Controller configuration
@@ -127,6 +128,9 @@ Devise.setup do |config|
 
   # Set up a pepper to generate the hashed password.
   # config.pepper = '550e4430f0afa9830959f601a3ba77d23b26847f45830255f3ae71638fa03ca073fca5d4a1d9cad1b8668b1005dc0863c3ddc2525c4d8932dffc0b1268869752'
+
+  # config.pepper = '1a111242a7b764cfb79b6f64bea998782d4d4346f3da459ecfa68c62b053db6c7dc0dfa8daacc453fdcfa295db23c8963e277c92e00ed838412e1bb81d51259b'
+
   # config.pepper = 'a22c7d8c0f3131827e96f0ff99f4d4fe407cf339341b2df293a17a3d54d145118a7c09192accd1c5152fde33adc848819a1f62a66cf9d141d19bfcd4db4f142f'
 
 
