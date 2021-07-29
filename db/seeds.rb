@@ -14,5 +14,4 @@ User.destroy_all
     encrypted_password: 'taawktljasktlw4aaglj')
     user.save!
 end
-
 # Faker::Internet.password
