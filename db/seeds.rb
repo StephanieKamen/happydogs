@@ -5,14 +5,28 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
 User.destroy_all
 
 5.times do
-  user = User.create(
+  user = User.new(
     name: Faker::Name.name,
     email: Faker::Internet.email,
-    encrypted_password: 'taawktljasktlw4aaglj')
+    password: '123456')
     user.save!
+end
+
+Doghome.destroy_all
+
+5.times do
+  doghome = Doghome.new(
+    title: Faker::Name.name,
+    description: Faker::Creature::Dog.sound,
+    location: Faker::Address.city,
+    price_per_day: Faker::Commerce.price,
+    user_id: User.first.id)
+    doghome.save!
 end
 
 # Faker::Internet.password
