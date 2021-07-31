@@ -24,6 +24,8 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'faker'
 
+gem 'activesupport'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
