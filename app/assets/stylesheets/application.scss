@@ -11,3 +11,27 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.banner {
+  background-image: asset-url('dog.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 900px;
+}
+
+.home {
+  color: white;
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.home-p {
+  color: white;
+  display: left;
+  font-size: 24px;
+}
