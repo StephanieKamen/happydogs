@@ -1,0 +1,16 @@
+<h1>See your Doghome: <%= @doghome.title %> </h1>
+
+<div>
+  <h2> <%= @doghome.title %> </h2>
+  <p> <%= @doghome.description %> </p>
+  <p> <%= @doghome.price_per_day %> </p>
+
+  <br>
+  <button id="sweet-alert-booking_confirmation" class="btn btn-primary">Book now</button>
+
+</div>
+
+<div>
+  <%= link_to "Home", root_path %>
+  <%= link_to "See all", doghomes_path %>
+</div>
