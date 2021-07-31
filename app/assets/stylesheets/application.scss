@@ -16,22 +16,45 @@
   background-image: asset-url('dog.jpg');
   background-size: cover;
   background-position: center;
-  height: 900px;
+  height: 800px;
 }
 
 .home {
   color: white;
-  display: block;
-  font-size: 2em;
-  margin-block-start: 0.67em;
-  margin-block-end: 0.67em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  text-align: left;
+  display: flex;
+  font-size: 36px;
   font-weight: bold;
+  background-size: cover;
+  background-position: center;
+  padding: 300px 0px 20px 0px;
+  padding-right: 550px;
+  margin-left: -50px;
 }
 
 .home-p {
   color: white;
   display: left;
-  font-size: 24px;
+  font-size: 20px;
+  margin-left: -50px;
+  padding-right: 550px;
+}
+
+.btn {
+  margin-left: -50px;
+  background-color: #00303F;
+  border: 2px solid #00303F;
+  border-radius: 4px
+}
+
+.btn:hover {
+  color: #5B5B5B;
+  margin-left: -50px;
+  background-color: #CCFFBD;
+  border: 2px solid #CCFFBD;
+  border-radius: 4px
+}
+
+.navbar-brand {
+  radius: 50px;
 }
