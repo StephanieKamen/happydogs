@@ -9,6 +9,8 @@ class User < ApplicationRecord
   # validates :name, presence: true
 
   validates :email, presence: true
+
   has_many :doghomes, dependent: :destroy
- # has_many :bookings, depentent: :destroy
+  has_many :bookings, dependent: :destroy
+  # has_many :bookings, through: :doghomes
 end
