@@ -17,6 +17,7 @@ User.destroy_all
     user.save!
 end
 
+
 Doghome.destroy_all
 
 5.times do
