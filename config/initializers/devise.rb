@@ -127,6 +127,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
+  # config.pepper = '550e4430f0afa9830959f601a3ba77d23b26847f45830255f3ae71638fa03ca073fca5d4a1d9cad1b8668b1005dc0863c3ddc2525c4d8932dffc0b1268869752'
 
   # config.pepper = '1a111242a7b764cfb79b6f64bea998782d4d4346f3da459ecfa68c62b053db6c7dc0dfa8daacc453fdcfa295db23c8963e277c92e00ed838412e1bb81d51259b'
 

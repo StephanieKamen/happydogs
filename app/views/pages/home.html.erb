@@ -1,12 +1,7 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
-<img src="app/assets/images/dog.jpg">
-  <div class="container">
-    <h1>xyxy<strong>xyxy</strong> to <strong>xyxy/strong>!</h1>
-    <p>xyxyx</p>
-    <a class="btn btn-flat" href="#">Book now</a>
+<div class="banner"> <!-- style="background-image: url('<%= image_path "dog.jpg" %>)"> -->
+   <div class="container">
+    <h1 class="home">Happy Dogs combine the best of two worlds: beautiful flats & dogs!</h1>
+    <p class="home-p">Book your dog home now and experience a lovely stay in a home with your dog in any city around the world!</p>
+    <%= link_to "Book a dog home now!", doghomes_path, class: "btn btn-primary"%>
   </div>
 </div>
-
-
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
