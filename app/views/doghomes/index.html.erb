@@ -1,0 +1,19 @@
+<h1>Doghomes</h1>
+
+<div>
+  <ol>
+    <% @doghomes.each do |doghome| %>
+    <li>
+      <h2> <%= doghome.title %> </h2>
+      <p> <%= doghome.description %> </p>
+      <p> <%= doghome.price_per_day %> </p>
+    </li>
+    <% end %>
+  </ol>
+</div>
+
+<div>
+  <%= link_to "Home", root_path %>
+</div>
+
+
