@@ -5,3 +5,8 @@
     <%= link_to "Book a dog home now!", doghomes_path, class: "btn_home"%>
   </div>
 </div>
+<%= render 'shared/footer'%>
+ <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+      <%= yield %>
+</div>

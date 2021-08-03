@@ -64,3 +64,26 @@
 .navbar-brand {
   radius: 50px;
 }
+
+.footer {
+  background-color: #F4F4F4;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px
+}
+
+.footer a {
+  color: #2F5D62;
+  font-size: 30px;
+  margin: 0 6px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  color: #343d46;
+  margin-top: 10px;
+}
+
+.footer p .fas  {
+  color: #845460;
+}
