@@ -1,19 +1,22 @@
-<h1>Doghomes</h1>
+<h1>Doghomes in Berlin</h1>
+
+<div>
+  <p> <%= link_to "Home", root_path %> </p>
+</div>
 
 <div class="cards-container">
 
   <% @doghomes.each do |doghome| %>
     <div class="card">
-      <h2> <%= doghome.title %> </h2>
-      <p> <%= doghome.description %> </p>
-      <p> <%= doghome.price_per_day %> </p>
+      <h2 style="text-align: center; font-weight: bold"><%= doghome.title %></h2>
+      <hr>
+      <p style="text-align: center;"> Description: <%= doghome.description %> </p>
+      <p style="text-align: center;"> Price: <%= doghome.price_per_day %> EUR / day</p>
       <button><%= link_to "See more details", doghome_path(doghome) %></button>
     </div>
   <% end %>
 </div>
 
-<div>
-  <%= link_to "Home", root_path %>
-</div>
+
 
 
