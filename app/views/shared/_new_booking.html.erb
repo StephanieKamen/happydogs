@@ -1,0 +1,9 @@
+
+
+<%= simple_form_for([ @doghome, @booking ]) do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <% if user_signed_in? %>
+    <%= f.submit %>
+  <% end %>
+<% end %>

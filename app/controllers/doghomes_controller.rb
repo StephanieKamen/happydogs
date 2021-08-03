@@ -6,5 +6,6 @@ class DoghomesController < ApplicationController
 
   def show
     @doghome = Doghome.find(params[:id])
+    @booking = Booking.new
   end
 end
