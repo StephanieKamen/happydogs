@@ -1,20 +1,15 @@
 <h1>Doghomes</h1>
 
-<div>
-  <ul>
-    <% @doghomes.each do |doghome| %>
-    <li>
+<div class="cards-container">
+
+  <% @doghomes.each do |doghome| %>
+    <div class="card">
       <h2> <%= doghome.title %> </h2>
       <p> <%= doghome.description %> </p>
       <p> <%= doghome.price_per_day %> </p>
-
       <button><%= link_to "See more details", doghome_path(doghome) %></button>
-
-    </li>
-    <br>
-    <% end %>
-
-  </ul>
+    </div>
+  <% end %>
 </div>
 
 <div>
