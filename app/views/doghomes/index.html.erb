@@ -5,14 +5,14 @@
 </div>
 <div class="row">
   <% @doghomes.each do |doghome| %>
-    <div class="col-sm-3" style="text-align: center" >
-      <img text-align="center" width="300" height="300"  <%= image_tag "doghome_pic_1.jpg" %>
+    <div class="col-sm-3" style="width: 18rem; text-align: center; padding: 8px; background-color: #FAF1E6" >
+      <img text-align="center" width="300" height="300" border-radius="20vh"<%= image_tag "doghome_pic_1.jpg" %>
       <h2 style="text-align: center; font-weight: bold"><%= doghome.title %></h2>
       <hr>
       <p> Description: <%= doghome.description %> </p>
       <p> Price: <%= doghome.price_per_day %> EUR / day</p>
       <p> Location: <%= doghome.location %> Straße 24, Berlin </p>
-      <button class="btn btn-primary"><%= link_to "See more details", doghome_path(doghome) %></button>
+      <button class="btn btn-primary" style="background-color: #3EDBF0"><%= link_to "See more details", doghome_path(doghome) %></button>
     </div>
   <% end %>
 </div>
