@@ -3,16 +3,16 @@
 <div>
   <p> <%= link_to "Home", root_path %> </p>
 </div>
-
-<div class="cards-container">
-
+<div class="row">
   <% @doghomes.each do |doghome| %>
-    <div class="card">
+    <div class="col-sm-3" style="text-align: center" >
+      <img text-align="center" width="300" height="300"  <%= image_tag "doghome_pic_1.jpg" %>
       <h2 style="text-align: center; font-weight: bold"><%= doghome.title %></h2>
       <hr>
-      <p style="text-align: center;"> Description: <%= doghome.description %> </p>
-      <p style="text-align: center;"> Price: <%= doghome.price_per_day %> EUR / day</p>
-      <button><%= link_to "See more details", doghome_path(doghome) %></button>
+      <p> Description: <%= doghome.description %> </p>
+      <p> Price: <%= doghome.price_per_day %> EUR / day</p>
+      <p> Location: <%= doghome.location %> Straße 24, Berlin </p>
+      <button class="btn btn-primary"><%= link_to "See more details", doghome_path(doghome) %></button>
     </div>
   <% end %>
 </div>
