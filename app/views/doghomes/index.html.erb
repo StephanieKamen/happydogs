@@ -1,5 +1,5 @@
 <div class="jumbotron">
-  <h1 class="display-4"> Find a loving local Doghome</h1>
+  <h1 class="display-4"> Find a loving Doghome</h1>
   <p class="lead">This is a simple way to help you to find a lovely place for your dog.</p>
   <hr class="my-4">
   <p>Search and connect with trusted Doghomers.</p>
@@ -14,15 +14,15 @@
 <hr>
 
 <div class="jumbotron" style="padding: 15px 0 5px 0">
-  <p style="padding: 0px 2px 0px 6px">Doghomes in <strong>Berlin</strong></p>
+  <p style="padding: 0px 2px 0px 6px; font-size: 18px">Doghomes in <strong>Berlin</strong></p>
 </div>
 
 <hr>
 
 <div class="card-deck">
   <% @doghomes.each do |doghome| %>
-    <div class="card" style="border-radius: 16px">
-      <img class="card-img-top style="border-radius: 16px <%= image_tag "doghome_pic_1.jpg" %>
+    <div class="card" style="border-top: 15px; border-radius: 12px 12px 0 0">
+      <%= image_tag "doghome_pic_1.jpg", class:"card-img-top", style:"border-radius: 12px 12px 0 0" %>
       <div class="card-body">
         <h5 class="card-title">Doghome of <br><strong><%= doghome.title %></strong></h5>
         <hr>
@@ -46,8 +46,9 @@
   <p>Create your account today, it is easy and quick!</p>
   <a class="btn btn-outline-success" href="#" role="button">Create an account</a>
   <hr>
+  <br>
   <div>
-    <a class="btn btn-outline-success" <%= link_to "Back to home", root_path %>
+    <%= link_to "Back to home", root_path, class:"btn btn-outline-success" %>
   </div>
 </div>
 
