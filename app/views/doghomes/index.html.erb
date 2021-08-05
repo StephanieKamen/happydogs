@@ -1,40 +1,56 @@
-<div class="title-index">
-  <h1>Doghomes in Berlin</h1>
+<div class="jumbotron">
+  <h1 class="display-4"> Find a loving local Doghome</h1>
+  <p class="lead">This is a simple way to help you to find a lovely place for your dog.</p>
+  <hr class="my-4">
+  <p>Search and connect with trusted Doghomers.</p>
+  <p class="lead">
+  <form class="form-inline">
+    <input class="form-control mr-sm-6" type="search" placeholder="Location" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+  <hr>
 </div>
 
-<div>
-  <p> <%= link_to "Home", root_path %> </p>
+<hr>
+
+<div class="jumbotron" style="padding: 15px 0 5px 0">
+  <p style="padding: 0px 2px 0px 6px">Doghomes in <strong>Berlin</strong></p>
 </div>
 
-<div class="search-index" style="width: 33%; margin-left: 18px;">
-  <%= form_tag doghomes_path, class: "index-search", method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Write the locantion and find a Doghome" %>
-    <%= submit_tag "🔍", class:"btn btn-primary", style:"margin-left: 5px"%>
-  <% end %>
-</div>
+<hr>
 
 <div class="card-deck">
   <% @doghomes.each do |doghome| %>
-    <div class="card">
-      <img class="card-img-top" <%= image_tag "doghome_pic_1.jpg" %>
-      <hr>
+    <div class="card" style="border-radius: 16px">
+      <img class="card-img-top style="border-radius: 16px <%= image_tag "doghome_pic_1.jpg" %>
       <div class="card-body">
-        <h5 class="card-title">This is the doghome of <strong><%= doghome.title %></strong></h5>
-        <p class="card-text"> Description: Your dog you feel at home here at <%= doghome.description %> </p>
+        <h5 class="card-title">Doghome of <br><strong><%= doghome.title %></strong></h5>
+        <hr>
+        <p class="card-text"> Description: Your dog will feel very happy and comfortable here, like at home, <%= doghome.description %>! </p>
         <p class="card-text"> Price: <%= doghome.price_per_day %> <i class="fas fa-euro-sign"></i> / day</p>
         <p class="card-text"> Location: <%= doghome.location %> Str. 24, Berlin </p>
-        <button type="button" class="btn btn-info" style="margin-left: 25px"><%= link_to "See more details", doghome_path(doghome) %></button>
+        <button type="button" class="btn btn-outline-success" style="margin-left: 40px"><%= link_to "See more details", doghome_path(doghome) %></button>
         <hr>
         <div class="card-footer">
-          <small class="text-muted">Last updated 5 mins ago</small>
+          <small class="text-muted">Last updated <%= rand(20..60) %> mins ago</small>
         </div>
       </div>
     </div>
   <% end %>
 </div>
+
+<br>
+<hr>
+
+<div class="jumbotron">
+  <p>Create your account today, it is easy and quick!</p>
+  <a class="btn btn-outline-success" href="#" role="button">Create an account</a>
+  <hr>
+  <div>
+    <a class="btn btn-outline-success" <%= link_to "Back to home", root_path %>
+  </div>
+</div>
+
 
 
 
