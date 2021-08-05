@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 require 'active_support/core_ext/integer/time'
+require "open-uri"
 
 User.destroy_all
 
@@ -28,8 +29,15 @@ Doghome.destroy_all
     location: Faker::Address.city,
     price_per_day: '10.99',
     user_id: User.first.id)
+
+
+    file = URI.open('https://images.unsplash.com/photo-1581888227599-779811939961?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1567&q=80')
+    doghome.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
     doghome.save!
+
 end
+
 
 # Faker::Internet.password
 
