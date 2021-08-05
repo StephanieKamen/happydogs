@@ -13,11 +13,12 @@
 
   <body>
 
+  <div class="wrapper">
     <%= render 'shared/navbar' %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <div style="padding: 10px">
       <%= yield %>
+
       <%= render 'shared/footer'%>
     </div>
   </body>
