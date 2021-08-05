@@ -27,16 +27,15 @@ import "bootstrap";
 
 import { initSweetalert } from '../plugins/init_sweetalert';
 
-initSweetalert('#sweet-alert-booking_confirmation', {
-  title: "Booking confirmation",
-  text: "Your booking is completed!",
-  icon: "success"
-});
-
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  initSweetalert('#sweet-alert-booking_confirmation', {
+    title: "Booking confirmation",
+    text: "Your booking is completed!",
+    icon: "success"
+  });
 });
