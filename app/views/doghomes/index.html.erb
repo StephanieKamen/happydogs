@@ -1,18 +1,37 @@
-<h1>Doghomes in Berlin</h1>
+<div class="title-index">
+  <h1>Doghomes in Berlin</h1>
+</div>
 
 <div>
   <p> <%= link_to "Home", root_path %> </p>
 </div>
-<div class="row">
+
+<div class="search-index" style="width: 33%; margin-left: 18px;">
+  <%= form_tag doghomes_path, class: "index-search", method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Write the locantion and find a Doghome" %>
+    <%= submit_tag "🔍", class:"btn btn-primary", style:"margin-left: 5px"%>
+  <% end %>
+</div>
+
+<div class="card-deck">
   <% @doghomes.each do |doghome| %>
-    <div class="col-sm-3" style="width: 18rem; text-align: center; padding: 8px; background-color: #FAF1E6" >
-      <img text-align="center" width="300" height="300" border-radius="20vh"<%= image_tag "doghome_pic_1.jpg" %>
-      <h2 style="text-align: center; font-weight: bold"><%= doghome.title %></h2>
+    <div class="card">
+      <img class="card-img-top" <%= image_tag "doghome_pic_1.jpg" %>
       <hr>
-      <p> Description: <%= doghome.description %> </p>
-      <p> Price: <%= doghome.price_per_day %> EUR / day</p>
-      <p> Location: <%= doghome.location %> Straße 24, Berlin </p>
-      <button class="btn btn-primary" style="background-color: #3EDBF0"><%= link_to "See more details", doghome_path(doghome) %></button>
+      <div class="card-body">
+        <h5 class="card-title">This is the doghome of <strong><%= doghome.title %></strong></h5>
+        <p class="card-text"> Description: Your dog you feel at home here at <%= doghome.description %> </p>
+        <p class="card-text"> Price: <%= doghome.price_per_day %> <i class="fas fa-euro-sign"></i> / day</p>
+        <p class="card-text"> Location: <%= doghome.location %> Str. 24, Berlin </p>
+        <button type="button" class="btn btn-info" style="margin-left: 25px"><%= link_to "See more details", doghome_path(doghome) %></button>
+        <hr>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 5 mins ago</small>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>
