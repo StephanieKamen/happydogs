@@ -1,0 +1,6 @@
+<h1>Your booking is confirmed!</h1>
+<p> Enjoy your stay at <%= @booking.doghome.title %> between <%= @booking.start_date %> and <%= @booking.end_date %> </p>
+<p> Total cost of your stay is <%= @booking.total_price %>€</p>
+<%= link_to "View full details of your doghome", doghome_path(@booking.doghome), class: "btn btn-primary" %>
+<%= link_to "Explore more doghomes", doghomes_path, class: "btn btn-primary" %>
+

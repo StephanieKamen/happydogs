@@ -1,20 +1,38 @@
-<h1>See your Doghome: <%= @doghome.title %> </h1>
 
-<div>
-  <h2> <%= @doghome.title %> </h2>
-  <p> <%= @doghome.description %> </p>
-  <p> <%= @doghome.price_per_day %> </p>
-  <br>
-  <%= render "shared/new_booking", booking: @booking %>
-  <br>
-  <% unless user_signed_in? %>
-    <%= link_to "to book log in!", new_user_session_path, class: "btn btn-primary"  %>
-  <% end %>
-    <%# <button id="sweet-alert-booking_confirmation" class="btn btn-primary">Book now</button> %>
+<div class=container>
+  <!-- <div> -->
+    <!-- <h1>See your Doghome: <%= @doghome.title %> </h1> -->
+    <!-- <h2> <%= @doghome.title %> </h2> -->
+    <!-- <p> <%= @doghome.description %> </p> -->
+    <!-- <p> <%= @doghome.price_per_day %> </p> -->
+  <!-- </div> -->
+  <div>
+    <%= image_tag("flat.jpg", size: "400") %>
+    <!-- style="background-image: url('<%= image_path "flat.jpg" %>)"> -->
+    <div>
+      <div>
+        <h2><%= @doghome.title %></h2>
+        <p><%= @doghome.description %> "!"</p>
+      </div>
+      <h2 ><%= @doghome.price_per_day %> </h2>
+    </div>
+  </div>
 
+  <br>
+
+  <div class="row justify-content-center">
+    <div class="col-lg-6" >
+    <%= render "shared/new_booking", booking: @booking %>
+    <br>
+    <% unless user_signed_in? %>
+      <%= link_to "To book log in!", new_user_session_path, class: "btn btn-primary"  %>
+    <% end %>
+      <%# <button id="sweet-alert-booking_confirmation" class="btn btn-primary">Book now</button> %>
+    </div>
+  </div>
 </div>
 
 <div>
-  <%= link_to "Home", root_path %>
-  <%= link_to "See all", doghomes_path %>
+  <%= link_to "Home", root_path, class:"btn btn-primary"  %>
+  <%= link_to "See all", doghomes_path, class:"btn btn-primary"  %>
 </div>
