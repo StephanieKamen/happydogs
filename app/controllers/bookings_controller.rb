@@ -5,7 +5,7 @@ def create
   @booking = Booking.new(booking_params)
   @booking.doghome = @doghome
   @booking.user = current_user
-  @booking.total_price = (@booking.start_date - @booking.end_date).to_f * @booking.doghome.price_per_day.to_f
+  @booking.total_price = ((@booking.end_date - @booking.start_date).to_f * @booking.doghome.price_per_day.to_f).round(2)
   @booking.save!
   redirect_to booking_path(@booking)
 end
