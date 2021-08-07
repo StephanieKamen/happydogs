@@ -11,3 +11,48 @@
   width: 40px;
   border-radius: 40%;
 }
+
+.navbar {
+   background-color: #00303F;
+ }
+
+ .navbar-brand {
+   radius: 50px;
+   color: white;
+   font-size: 18px;
+   padding: 15px;
+   border-radius: 20px;
+   }
+
+ .navbar-brand:hover {
+   color: white;
+   }
+
+ .navbar-lewagon .navbar-brand img {
+   width: 80px;
+   border-radius: 50%;
+   margin-right: 15px;
+ }
+
+ .avatar {
+   margin-top: inherit;
+   width: 70px;
+   border-radius: 50%;
+   margin-right: 15px;
+ }
+
+ .navbar-expand-sm .navbar-nav .nav-link {
+   color: white;
+   padding: 25px;
+   padding-left: inherit;
+   font-size: 18px;
+   margin: 5px 5px;
+ }
+
+.navbar-expand-sm .navbar-nav .nav-link {
+   color: white;
+   padding: 25px;
+   padding-left: inherit;
+   font-size: 18px;
+   margin: 5px 5px;
+ }
