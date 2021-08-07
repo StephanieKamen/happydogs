@@ -44,20 +44,18 @@ end
 
 Doghome.destroy_all
 
-5.times do
+5.times do |i|
   doghome = Doghome.new(
     title: Faker::Name.name,
-    description: texts.sample,
+    description: texts[i],
     location: Faker::Address.city,
-    price_per_day: prices.sample,
+    price_per_day: prices[i],
     user_id: User.first.id)
 
-
-    file = URI.open(images.sample)
+    file = URI.open(images[i])
     doghome.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
     doghome.save!
-
 end
 
 
