@@ -1,34 +1,71 @@
 
-<div class=container>
-  <!-- <div> -->
-    <!-- <h1>See your Doghome: <%= @doghome.title %> </h1> -->
-    <!-- <h2> <%= @doghome.title %> </h2> -->
-    <!-- <p> <%= @doghome.description %> </p> -->
-    <!-- <p> <%= @doghome.price_per_day %> </p> -->
-  <!-- </div> -->
-  <div>
-    <%= image_tag("flat.jpg", size: "400") %>
-    <!-- style="background-image: url('<%= image_path "flat.jpg" %>)"> -->
-    <div>
-      <div>
-        <h2><%= @doghome.title %></h2>
-        <p><%= @doghome.description %> "!"</p>
+<div class="jumbotron">
+  <h1 class="display-4"> Doghome of <%= @doghome.title %></h1>
+  <p class="lead">Save the good price by booking your Doghome today</p>
+</div>
+
+
+<div>
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+      <%= cl_image_tag @doghome.photo.key, class:"img-thumbnail", radius: 12, height: 250, width: 300, crop: :fill %>
       </div>
-      <h2 ><%= @doghome.price_per_day %> </h2>
+      <div class="col-6">
+        <h2><%= @doghome.title %></h2>
+        <p><%= @doghome.description %></p>
+        <p><%= @doghome.price_per_day %> <i class="fas fa-euro-sign"></i> / day </p>
+      </div>
     </div>
   </div>
+</div>
+<br>
 
+<div class="row justify-content-center">
+  <div class="col-lg-6" >
+  <%= render "shared/new_booking", booking: @booking %>
   <br>
+  </div>
+</div>
 
-  <div class="row justify-content-center">
-    <div class="col-lg-6" >
-    <%= render "shared/new_booking", booking: @booking %>
-    <br>
+<div class="jumbotron">
+  <h3>Send a message to <%= @doghome.title %></h3>
+
+  <form class="row g-3">
+  <div class="col-md-3">
+    <label for="validationDefault01" class="form-label">First name:</label>
+    <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+  </div>
+  <div class="col-md-3">
+    <label for="validationDefault02" class="form-label">Last name:</label>
+    <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+  </div>
+  <br>
+  <div class="col-md-6">
+    <label for="validationDefault03" class="form-label">Message:</label>
+    <input type="text" class="form-control" id="validationDefault03" required>
+  </div>
+  <br>
+  <div class="col-12">
+    <div class="form-check">
+       <br>
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+      <label class="form-check-label" for="invalidCheck2">
+        Agree to terms and conditions
+      </label>
     </div>
+     <br>
   </div>
+  <div class="col-12">
+    <button class="btn btn-outline-success" type="submit">Submit your message</button>
+  </div>
+</form>
+</div>
 
-  <div>
-    <%= link_to "Home", root_path, class:"btn btn-primary"  %>
-    <%= link_to "See all", doghomes_path, class:"btn btn-primary"  %>
-  </div>
+</div>
+
+<div class="jumbotron">
+  <%= link_to "See all doghomes", doghomes_path, class:"btn btn-outline-success"  %>
+  <hr>
+  <%= link_to "Back to home", root_path, class:"btn btn-outline-success" %>
 </div>
