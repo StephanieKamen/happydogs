@@ -1,4 +1,17 @@
 
+<div class="jumbotron">
+  <h1 class="display-4"> Doghome of <%= @doghome.title %></h1>
+  <p class="lead"><%= @doghome.description %></p>
+  <hr class="my-4">
+  <p>Search and connect with trusted Doghomers.</p>
+  <p class="lead">
+  <form class="form-inline">
+    <input class="form-control mr-sm-6" type="search" placeholder="Location" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+  <hr>
+</div>
+
 <div class=container>
   <!-- <div> -->
     <!-- <h1>See your Doghome: <%= @doghome.title %> </h1> -->
@@ -26,9 +39,10 @@
     <br>
     </div>
   </div>
+</div>
 
-  <div>
-    <%= link_to "Home", root_path, class:"btn btn-primary"  %>
-    <%= link_to "See all", doghomes_path, class:"btn btn-primary"  %>
-  </div>
+<div class="jumbotron">
+  <%= link_to "See all doghomes", doghomes_path, class:"btn btn-outline-success"  %>
+  <hr>
+  <%= link_to "Back to home", root_path, class:"btn btn-outline-success" %>
 </div>
