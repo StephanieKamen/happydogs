@@ -21,6 +21,8 @@ images = ["https://images.unsplash.com/photo-1581888227599-779811939961?ixlib=rb
 "https://images.unsplash.com/photo-1601758261049-55d060e1159a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZG9nJTIwYW5kJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60",
 "https://images.unsplash.com/photo-1560967560-2a19f2ca05b2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGRvZyUyMGFuZCUyMHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"]
 
+prices = [15.99,22.55,20.85,19.89, 21.99, 25.59,30.99,16.99]
+
 User.destroy_all
 
 5.times do
@@ -39,7 +41,7 @@ Doghome.destroy_all
     title: Faker::Name.name,
     description: Faker::Creature::Dog.sound,
     location: Faker::Address.city,
-    price_per_day: '10.99',
+    price_per_day: prices.sample,
     user_id: User.first.id)
 
 
