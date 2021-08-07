@@ -7,6 +7,19 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 require 'active_support/core_ext/integer/time'
+require "open-uri"
+
+images = ["https://images.unsplash.com/photo-1581888227599-779811939961?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1567&q=80",
+"https://images.unsplash.com/photo-1518717758536-85ae29035b6d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+"https://images.unsplash.com/photo-1494947665470-20322015e3a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80",
+"https://images.unsplash.com/photo-1546975490-e8b92a360b24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fGRvZ3N8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60",
+"https://images.unsplash.com/photo-1617712196812-55f51fe91f2f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQ3fHxkb2dzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60",
+"https://images.unsplash.com/photo-1536780250812-9c417ccad37d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZG9ncyUyMGFuZCUyMHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60",
+"https://images.unsplash.com/photo-1539923790716-af5490e0753a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZG9ncyUyMGFuZCUyMHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60",
+"https://images.unsplash.com/photo-1510613439354-64547973b449?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZG9nJTIwYW5kJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60",
+"https://images.unsplash.com/photo-1508568230916-c2692a5d7b1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZG9nJTIwYW5kJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60",
+"https://images.unsplash.com/photo-1601758261049-55d060e1159a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZG9nJTIwYW5kJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60",
+"https://images.unsplash.com/photo-1560967560-2a19f2ca05b2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGRvZyUyMGFuZCUyMHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"]
 
 User.destroy_all
 
@@ -28,8 +41,15 @@ Doghome.destroy_all
     location: Faker::Address.city,
     price_per_day: '10.99',
     user_id: User.first.id)
+
+
+    file = URI.open(images.sample)
+    doghome.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
     doghome.save!
+
 end
+
 
 # Faker::Internet.password
 
