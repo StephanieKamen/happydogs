@@ -24,15 +24,11 @@
     <div class="col-lg-6" >
     <%= render "shared/new_booking", booking: @booking %>
     <br>
-    <% unless user_signed_in? %>
-      <%= link_to "To book log in!", new_user_session_path, class: "btn btn-primary"  %>
-    <% end %>
-      <%# <button id="sweet-alert-booking_confirmation" class="btn btn-primary">Book now</button> %>
     </div>
   </div>
-</div>
 
-<div>
-  <%= link_to "Home", root_path, class:"btn btn-primary"  %>
-  <%= link_to "See all", doghomes_path, class:"btn btn-primary"  %>
+  <div>
+    <%= link_to "Home", root_path, class:"btn btn-primary"  %>
+    <%= link_to "See all", doghomes_path, class:"btn btn-primary"  %>
+  </div>
 </div>
