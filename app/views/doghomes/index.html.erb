@@ -22,7 +22,7 @@
 <div class="card-deck">
   <% @doghomes.each do |doghome| %>
     <div class="card" style="border-top: 15px; border-radius: 12px 12px 0 0">
-      <%= cl_image_tag doghome.photo.key, height: 200, width: 260, crop: :fill %>
+      <%= cl_image_tag doghome.photo.key, class: "card-img-top", height: 200, width: 260, crop: :fill %>
 
       <div class="card-body">
         <h5 class="card-title">Doghome of <br><strong><%= doghome.title %></strong></h5>
