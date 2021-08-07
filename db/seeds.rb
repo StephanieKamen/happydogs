@@ -23,6 +23,14 @@ images = ["https://images.unsplash.com/photo-1581888227599-779811939961?ixlib=rb
 
 prices = [15.99,22.55,20.85,19.89, 21.99, 25.59,30.99,16.99]
 
+texts = ["I have experience caring for dogs of all sizes. Since I work from home I will be with your dog all the time. See you!",
+  "Your dog will feel very happy and comfortable here, like at home. Please send me a message for more information!",
+  "Hello! I have a sunny balcony where everyone is allowed to enjoy the sun from the couch. I also visit the dog park!",
+  "I love animals and they feel very relaxed near to me. I move to Berlin in 2012 and live in Wilmersdorf. Book with me!",
+  "I live in an apartment with a private garden and the building has a big central garden. Your dog will have fun!",
+  "Hello all furry mamas and papas! I have had pets since I was a child and have taken care of dogs in all stages of life.",
+  "I live in a 2 rooms apartment and which is 3 min walk away from Volkspark-Wilmersdorf and 10 min by car from Grunewald."]
+
 User.destroy_all
 
 5.times do
@@ -39,7 +47,7 @@ Doghome.destroy_all
 5.times do
   doghome = Doghome.new(
     title: Faker::Name.name,
-    description: Faker::Creature::Dog.sound,
+    description: texts.sample,
     location: Faker::Address.city,
     price_per_day: prices.sample,
     user_id: User.first.id)
