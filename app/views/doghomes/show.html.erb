@@ -13,11 +13,8 @@
       </div>
       <div class="col-6">
         <h2><%= @doghome.title %></h2>
-        <p><%= @doghome.description %> "!"</p>
+        <p><%= @doghome.description %></p>
         <p><%= @doghome.price_per_day %> <i class="fas fa-euro-sign"></i> / day </p>
-      </div>
-      <div class="col-6">
-
       </div>
     </div>
   </div>
@@ -36,26 +33,28 @@
 
   <form class="row g-3">
   <div class="col-md-3">
-    <label for="validationDefault01" class="form-label">First name</label>
+    <label for="validationDefault01" class="form-label">First name:</label>
     <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
   </div>
   <div class="col-md-3">
-    <label for="validationDefault02" class="form-label">Last name</label>
+    <label for="validationDefault02" class="form-label">Last name:</label>
     <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
   </div>
   <br>
   <div class="col-md-6">
-    <label for="validationDefault03" class="form-label">Message</label>
+    <label for="validationDefault03" class="form-label">Message:</label>
     <input type="text" class="form-control" id="validationDefault03" required>
   </div>
   <br>
   <div class="col-12">
     <div class="form-check">
+       <br>
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
       <label class="form-check-label" for="invalidCheck2">
         Agree to terms and conditions
       </label>
     </div>
+     <br>
   </div>
   <div class="col-12">
     <button class="btn btn-outline-success" type="submit">Submit your message</button>
