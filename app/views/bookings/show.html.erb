@@ -3,10 +3,10 @@
     Booking confirmation
   </div>
   <div class="card-body">
-    <h5 class="card-title">Enjoy your stay at <strong><%= @booking.doghome.title %>!</strong></h5>
+    <h4 class="card-title">Enjoy your stay at <%= @booking.doghome.title %>!</h4>
     <br>
     <p class="card-text">Your booking has between confirmed for <strong><%= @booking.start_date %></strong> to <strong><%= @booking.end_date %></strong>.</p>
-    <p> Total cost of your stay is <%= @booking.total_price %>€.</p>
+    <p> Total cost of your stay is <strong><%= @booking.total_price %>€.</strong></p>
     <br>
     <%= link_to "Back to your doghome", doghome_path(@booking.doghome), class: "btn btn-outline-success" %>
     <%= link_to "Explore more doghomes", doghomes_path, class: "btn btn-outline-success" %>
